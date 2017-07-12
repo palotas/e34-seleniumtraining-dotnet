@@ -55,6 +55,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SimpleTests.cs" />
     <Compile Include="WebdriverBasics.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
