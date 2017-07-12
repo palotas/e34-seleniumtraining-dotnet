@@ -6,7 +6,7 @@ using OpenQA.Selenium.Chrome;
 namespace SeleniumTraining
 {
     [TestClass]
-    public class UnitTest1
+    public class WebdriverBasics
     {
         [TestMethod]
         public void firstSeleniumTest()
