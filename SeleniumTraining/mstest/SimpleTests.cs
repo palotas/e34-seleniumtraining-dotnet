@@ -11,9 +11,9 @@ namespace SeleniumTraining
         {
             int a = 1;
             int b = 2;
-            int c = a - b;
+            int c = a + b;
 
-            Console.Write("C = " + c);
+            Console.Write("c = " + c);
             Assert.IsTrue(c == 3);
         }
     }
