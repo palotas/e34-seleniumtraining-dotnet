@@ -6,7 +6,7 @@ namespace SeleniumTraining
     [TestClass]
     public class SimpleTests
     {
-        [TestMethod]
+        [TestCategory("Nightly"), TestMethod()]
         public void firstTest()
         {
             int a = 1;
@@ -16,5 +16,25 @@ namespace SeleniumTraining
             Console.Write("c = " + c);
             Assert.IsTrue(c == 3);
         }
+
+        [DataTestMethod]
+        [DataRow(1)]
+        [DataRow(2)]
+        public void dataProviderTestSingleParameter(int value)
+        {
+            Console.Write("value: " + value);
+        }
+
+        [DataTestMethod]
+        [DataRow(1, "first")]
+        [DataRow(2, "second")]
+        public void dataProviderTestMultiParameter(int value, string s)
+        {
+            Console.Write("value: " + value + "------" + "string: " + s);
+        }
+
     }
+
+
+
 }
