@@ -60,6 +60,7 @@
     <Compile Include="seleniumbasics\Seleniumbasics.cs" />
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="seleniumbasics\Seleniumbasicssupport.cs" />
+    <Compile Include="seleniumbasics\RemoteWebdriver.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
