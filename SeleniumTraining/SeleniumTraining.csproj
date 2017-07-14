@@ -57,10 +57,12 @@
   <ItemGroup>
     <Compile Include="mstest\MoreTests.cs" />
     <Compile Include="mstest\SimpleTests.cs" />
+    <Compile Include="seleniumbasics\PageObject.cs" />
     <Compile Include="seleniumbasics\Seleniumbasics.cs" />
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="seleniumbasics\Seleniumbasicssupport.cs" />
     <Compile Include="seleniumbasics\RemoteWebdriver.cs" />
+    <Compile Include="seleniumbasics\PageObjectTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
