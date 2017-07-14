@@ -30,7 +30,7 @@ namespace SeleniumTraining
             Assert.IsTrue(c == 3);
         }
 
-        [DataTestMethod]
+        [TestMethod]
         [DataRow(1)]
         [DataRow(2)]
         public void dataProviderTestSingleParameter(int value)

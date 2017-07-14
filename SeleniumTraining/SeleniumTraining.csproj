@@ -57,8 +57,9 @@
   <ItemGroup>
     <Compile Include="mstest\MoreTests.cs" />
     <Compile Include="mstest\SimpleTests.cs" />
-    <Compile Include="seleniumbasics\WebdriverBasics.cs" />
+    <Compile Include="seleniumbasics\Seleniumbasics.cs" />
     <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="seleniumbasics\Seleniumbasicssupport.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
