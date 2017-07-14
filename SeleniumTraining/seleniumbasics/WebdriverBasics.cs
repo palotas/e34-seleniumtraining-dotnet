@@ -21,26 +21,5 @@ namespace SeleniumTraining
 
        }
 
-        [TestMethod]
-        public void firstFirefoxTest()
-        {
-            IWebDriver driver = new FirefoxDriver();
-            driver.Url = "http://www.google.com";
-            String pagetitle = driver.Title;
-            Assert.AreEqual("Google", pagetitle);
-            driver.Quit();
-        }
-
-        [TestMethod]
-        public void firstEdgeTest()
-        {
-            IWebDriver driver = new EdgeDriver();
-            driver.Url = "http://www.google.com";
-            String pagetitle = driver.Title;
-            Assert.AreEqual("Google", pagetitle);
-            driver.Quit();
-
-        }
-
     }
 }

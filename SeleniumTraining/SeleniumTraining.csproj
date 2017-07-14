@@ -55,12 +55,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="mstest\MoreTests.cs" />
     <Compile Include="mstest\SimpleTests.cs" />
     <Compile Include="seleniumbasics\WebdriverBasics.cs" />
     <Compile Include="AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Readme.md" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

@@ -6,14 +6,27 @@ namespace SeleniumTraining
     [TestClass]
     public class SimpleTests
     {
-        [TestCategory("Nightly"), TestMethod()]
-        public void firstTest()
+        [TestInitialize]
+        public void startup()
+        {
+            Console.WriteLine("starting up");
+        }
+
+        [TestCleanup]
+        public void cleanup()
+        {
+            Console.WriteLine("cleanup");
+        }
+
+
+        [TestCategory("regression"), TestMethod()]
+        public void groupTest2()
         {
             int a = 1;
             int b = 2;
             int c = a + b;
 
-            Console.Write("c = " + c);
+            Console.WriteLine("c = " + c);
             Assert.IsTrue(c == 3);
         }
 
