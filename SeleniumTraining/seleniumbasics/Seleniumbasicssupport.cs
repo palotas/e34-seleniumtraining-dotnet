@@ -10,7 +10,7 @@ namespace SeleniumTraining.seleniumbasics
 
     {
         [TestMethod]
-        public void getTitle()
+        public void GetTitle()
         {
             IWebDriver driver = new ChromeDriver();
             driver.Url = "http://www.google.com";
@@ -20,7 +20,7 @@ namespace SeleniumTraining.seleniumbasics
         }
 
         [TestMethod]
-        public void trycatch()
+        public void Trycatch()
         {
             IWebDriver driver = new ChromeDriver();
 
@@ -37,7 +37,7 @@ namespace SeleniumTraining.seleniumbasics
         }
 
         [TestMethod]
-        public void findElement()
+        public void FindElement()
         {
             IWebDriver driver = new ChromeDriver();
             driver.Url = "http://www.google.com";
