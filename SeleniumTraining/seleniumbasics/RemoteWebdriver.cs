@@ -12,11 +12,11 @@ namespace SeleniumTraining.seleniumbasics
         public void remoteWebdriver()
         {
             RemoteWebDriver driver;
-            DesiredCapabilities capabilities = DesiredCapabilities.Chrome();
+          /*  DesiredCapabilities capabilities = DesiredCapabilities.Chrome();
             driver = new RemoteWebDriver(capabilities);
             driver.Navigate().GoToUrl("http://www.google.com");
             Console.WriteLine(driver.Title);            
-            driver.Quit();
+            driver.Quit();*/
         }
     }
 }

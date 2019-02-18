@@ -13,6 +13,28 @@ namespace SeleniumTraining
     public class Seleniumbasics
 
     {
+
+        [TestMethod]
+        public void ffTests()
+        {
+            FirefoxOptions options = new FirefoxOptions();
+
+            DesiredCapabilities dc = (DesiredCapabilities)options.ToCapabilities();
+            dc.SetCapability("e34:token", "19705d15-03b8-4f");
+
+
+            IWebDriver driver = new RemoteWebDriver(new Uri("http://vm-106.element34.net/wd/hub"), dc);
+            //IWebDriver driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), dc);
+
+            driver.Navigate().GoToUrl("https://www.google.ch");
+            Assert.IsTrue(driver.Url.StartsWith("https://www.google.ch", StringComparison.InvariantCultureIgnoreCase));
+
+            driver.Quit();
+
+        }
+
+
+
         [TestMethod]
         public void firstChromeTest()
         {
@@ -22,19 +44,37 @@ namespace SeleniumTraining
        }
 
         [TestMethod]
-        public void ffTests()
+        public void chromeTests()
         {
-            FirefoxOptions options = new FirefoxOptions();
+           System.Diagnostics.Debug.WriteLine("Hello world");
 
-            DesiredCapabilities dc = (DesiredCapabilities)options.ToCapabilities();
+            ChromeOptions browserOptions = new ChromeOptions();
+            browserOptions.AddArgument("--enable--javascript");
+            browserOptions.AddArgument("--start-maximized");
+            browserOptions.AddAdditionalCapability("takesScreenshot", true, true);
+            browserOptions.AddAdditionalCapability("e34:l_testName", "bmw test", true);
+            browserOptions.AddAdditionalCapability("e34:token", "19705d15-03b8-4f", true);
 
-            //IWebDriver driver = new RemoteWebDriver(new Uri("https://vm-106.element34.net/wd/hub"), dc);
-            IWebDriver driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), dc);
+            Console.WriteLine(browserOptions.ToCapabilities());
+
+           // FirefoxOptions ff = new FirefoxOptions();
+            
+            //DesiredCapabilities dc = (DesiredCapabilities)ff.ToCapabilities(); 
+            
+           // dc.SetCapability("e34:token", "19705d15-03b8-4f");
+            //dc.SetCapability("e34:l_testName", "bmw test2");
+           // Console.WriteLine(dc);
+
+
+
+
+            IWebDriver driver = new RemoteWebDriver(new Uri("http://vm-106.element34.net/wd/hub"), browserOptions);
+            //IWebDriver driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), dc);
 
             driver.Navigate().GoToUrl("https://www.google.ch");
             Assert.IsTrue(driver.Url.StartsWith("https://www.google.ch", StringComparison.InvariantCultureIgnoreCase));
 
-            driver.Quit();
+           driver.Quit();
             
         }
         [TestMethod]
